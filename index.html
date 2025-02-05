@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="contact-form-main/assets/images/favicon-32x32.png"> 
+  <link rel="stylesheet" href="style.css">
+  <title>Contact form</title>
+  <style>
+  </style>
+</head>
+<body style="background-color: hsl(148, 38%, 91%)">
+  <div class="success-result" style="display: flex; justify-content: center; position: relative;">asdasdsad</div>
+	<div class="container">
+    <form class="form-body" action="#">
+      <div style="font-size: 24px;">Contact Form</div>
+      
+      <div class="column-section">
+        <div class="input-box first-name">
+          <label>First Name *</label>
+          <input type="text" class="input-text-box1" onchange="checkName1();">
+        </div>
+
+        <div class="input-box second-name">
+          <label>Second Name *</label>
+          <input type="text" class="input-text-box2" onchange="checkName2();">
+        </div>
+      </div>
+
+      <div class="input-box email">
+        <label>Email Address *</label>
+        <input type="text" class="input-text-box email-box" onchange="checkEmail();">
+      </div>
+
+      <div style="padding-top: 20px;">Query Type *</div>
+
+      <div class="column-section query" style="margin-top: 0;">
+        <div class="input-box query">
+          <input type="radio" class="radio-btn1" onclick="checkRadio();" name="radio-query">
+          <label style="cursor: pointer;">Enquiry Request *</label>
+        </div>
+
+        <div class="input-box">
+          <input type="radio" class="radio-btn2" onclick="checkRadio();" name="radio-query">
+          <label style="cursor: pointer;">Support Enquiry *</label>
+        </div>
+      </div>
+
+      <div class="error-position" style="margin-top: 15px;"></div>
+
+      <div class="input-box textbox">
+        <label>Messsage *</label>
+        <textarea class="message-box" onchange="checkMessage();"></textarea>
+      </div>
+
+      <div class="input-box checkbox">
+        <input type="checkbox" class="check-box">
+        <label>I consent to being contacted by the team *</label>
+      </div>
+      <div class="checkbox-error" style="margin-top: 15px;"></div>
+
+      <div class="input-box submit">
+        <input type="submit" onclick="submitBtn();">
+      </div>
+
+    </form>
+	</div>
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Contact Us
+
+First Name
+This field is required
+
+Last Name
+This field is required
+
+Email Address
+Please enter a valid email address
+This field is required
+
+Query Type
+General Enquiry
+Support Request
+Please select a query type
+
+Message
+This field is required
+
+I consent to being contacted by the team
+To submit this form, please consent to being contacted
+
+Submit
+
+Message Sent!
+Thanks for completing the form. We'll be in touch soon! -->
+
+<!-- <div class="attribution">
+  Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+  Coded by <a href="#">Your Name Here</a>. 
+</div> -->
+  

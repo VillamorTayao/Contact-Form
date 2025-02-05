@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="contact-form-main/assets/images/favicon-32x32.png"> 
+  <link rel="stylesheet" href="style.css">
+  <title>Contact form</title>
+  <style>
+  </style>
+</head>
+<body style="background-color: hsl(148, 38%, 91%)">
+	<div class="container">
+		<form action="#" class="form-body">
+
+			<p style="font-size: 32px; margin: 0 0 15px 0">Contact Us</p>
+
+      <div class="name-section">
+        <div class="name-container1" style="display: flex; flex-direction: column;">
+          <label for="first-name" style="padding-bottom: 9px;">First Name *</label>
+          <input type="text" name="first-name" class="name-box name-box1" onchange="checkBox1();">
+          <!-- <div class="error-msg1"></div> -->
+        </div>
+        
+        <div class="name-container2" style="display: flex; flex-direction: column;">
+          <label for="second-name" style="padding-bottom: 9px;">Second Name *</label>
+          <input type="text" name="second-name" class="name-box name-box2" onchange="checkBox2();">
+          <div class="error-msg2"></div>
+        </div>
+      </div>
+      
+
+      <div class="email-section">
+        <label for="email" style="padding-bottom: 9px;">Email Address *</label>
+        <input type="text" name="email" class="email-box" onchange="checkEmail();">
+        <div class="error-msg3"></div>
+        <div class="error-msg4"></div>
+      </div>
+
+      <p style="margin-top: 30px; margin-bottom: 15px;">Query Type *</p>
+      <div class="query-section">
+        <div class="query-btn" style="display: flex;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" fill="none" viewBox="0 0 20 21">
+            <path fill="#0C7D69" d="M10 .75a9.75 9.75 0 1 0 9.75 9.75A9.76 9.76 0 0 0 10 .75Zm0 18a8.25 8.25 0 1 1 8.25-8.25A8.26 8.26 0 0 1 10 18.75Zm5.25-8.25a5.25 5.25 0 1 1-10.499 0 5.25 5.25 0 0 1 10.499 0Z"/>
+          </svg>General Enquiry
+        </div>
+
+        <div class="query-btn" style="display: flex;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" fill="none" viewBox="0 0 20 21">
+            <path fill="#0C7D69" d="M10 .75a9.75 9.75 0 1 0 9.75 9.75A9.76 9.76 0 0 0 10 .75Zm0 18a8.25 8.25 0 1 1 8.25-8.25A8.26 8.26 0 0 1 10 18.75Zm5.25-8.25a5.25 5.25 0 1 1-10.499 0 5.25 5.25 0 0 1 10.499 0Z"/>
+          </svg>Support Request
+        </div>
+      </div>
+
+      <div class="message-section">
+        <p>Message *</p>
+        <textarea name="text-box" class="text-box"></textarea>
+      </div>
+
+      <div class="consent-section">
+        <div style="margin-right:10px">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 18 18"><path fill="#0C7D69" d="M16.5 0h-15A1.5 1.5 0 0 0 0 1.5v15A1.5 1.5 0 0 0 1.5 18h15a1.5 1.5 0 0 0 1.5-1.5v-15A1.5 1.5 0 0 0 16.5 0Zm-3.22 7.28-5.25 5.25a.748.748 0 0 1-1.06 0l-2.25-2.25a.75.75 0 1 1 1.06-1.06l1.72 1.72 4.72-4.72a.751.751 0 0 1 1.06 1.06Z"/></svg>
+        </div>
+        <div>
+          I consent to being contacted by the team *
+        </div>
+      </div>
+
+      <div class="submit-section">
+        <button type="submit" class="submit-btn">Submit</button>
+      </div>
+		</form>
+
+    <script src="script.js"></script>
+	</div>
+</body>
+</html>
+
+.name-section{
+    display: grid;
+    column-gap: 15px;
+    grid-template-columns: 375px 375px;
+}
+
+.name-box{
+    border: solid 0.1px;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 16px;
+}
+.name-box:hover{
+    border-color: hsl(169, 82%, 27%);
+}
+
+.email-section{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.email-box{
+    border: solid 0.1px;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 16px;
+}
+.email-box:hover{
+    border-color: hsl(169, 82%, 27%);
+}
+
+.query-section{
+    display: grid;
+    column-gap: 15px;
+    grid-template-columns: 375px 375px;
+    margin-top: 15px;
+    padding: 10px;
+    font-size: 18px;
+}
+.query-btn{
+    border: solid 0.1px black;
+    padding: 12px;
+    border-radius: 10px;
+}
+svg{
+    margin-right: 10px;
+}
+
+
+
+.message-section{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 30px;
+}
+.text-box{
+    height: 120px;
+    outline: none;
+    border: solid 0.1px;
+    border-radius: 10px;
+    resize: none;
+    padding: 10px;
+    font-size: 16px;
+}
+
+
+.consent-section{
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 30px;
+}
+
+
+.submit-section{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+.submit-btn{
+    flex: 1;
+    padding: 12px;
+    background-color: hsl(169, 82%, 27%);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+
+    transition: opacity 0.8s;
+}
+.submit-btn:hover{
+    opacity: 0.5;
+}
+
+.error{
+    margin-top: 10px; 
+    color: red; 
+    font-size: 16px
+}
